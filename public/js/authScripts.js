@@ -19,10 +19,10 @@ if (regForm) {
       });
       const data = await res.json();
       if (data.message === "ok") {
-        window.location.href = "/main";
-      } else {
-        regError.innerText = "Пароли не совпадают, повторите попытку";
+        window.location.href = "/";
       }
+    } else {
+      regError.innerText = "Пароли не совпадают, повторите попытку";
     }
   });
 }

@@ -6,6 +6,7 @@ router.post("/reg", async (req, res) => {
   try {
     const { login, password, email } = req.body;
     if (login && password && email) {
+        console.log(login)
       let user = await User.findOne({ where: email });
       if (!user) {
         const hashPass = await bcrypt.hash(password, 10);

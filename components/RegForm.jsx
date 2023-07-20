@@ -17,6 +17,15 @@ module.exports = function RegForm({ title, userName }) {
           </div>
           <div className="input-field col s6">
             <input
+              name="email"
+              id="email"
+              className="validate"
+              placeholder="email"
+              required
+            />
+          </div>
+          <div className="input-field col s6">
+            <input
               name="password"
               id="password"
               className="validate"
@@ -33,15 +42,7 @@ module.exports = function RegForm({ title, userName }) {
               required
             />
           </div>
-          <div className="input-field col s6">
-            <input
-              name="email"
-              id="email"
-              className="validate"
-              placeholder="email"
-              required
-            />
-          </div>
+
           <button
             className="btn waves-effect waves-light purple lighten-3"
             type="submit"
