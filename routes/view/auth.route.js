@@ -9,4 +9,16 @@ router.get("/reg", (req, res) => {
 router.get("/log", (req, res) => {
   res.renderComponent(LoginForm, { title: "Login" });
 });
+
+router.get("/logout", (req, res) => {
+    req.session.destroy((error) => {
+      if (error) {
+        res.status(500).json({ message: "Ошибка при удалении сессии" });
+      } else {
+        res.clearCookie("user_sid").json({ message: "Успешный выход" });
+      }
+    });
+  });
+
+  
 module.exports = router;
