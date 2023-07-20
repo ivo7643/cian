@@ -11,7 +11,7 @@ module.exports = function Navbar({ userName }) {
           {userName ? (
             <>
               <li>
-                <a href="gi">Categories</a>
+                <a href="#">Categories</a>
               </li>
               <li className="logout">
                 <a href="#">LogOut</a>
