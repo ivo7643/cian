@@ -1,9 +1,9 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-module.exports = function RegForm({ title, userLogin }) {
+module.exports = function RegForm({ title, userLogin,userStat }) {
   return (
-    <Layout title={title} userLogin={userLogin}>
+    <Layout title={title} userLogin={userLogin} userStat={userStat}>
       <form className="col s12 regForm" action="/api/auth/reg" method="POST">
         <div className="row">
           <div className="input-field col s6">

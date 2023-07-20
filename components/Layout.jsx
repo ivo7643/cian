@@ -2,7 +2,8 @@ const React = require("react");
 const Navbar = require("./Navbar");
 const Footer = require("./Footer");
 
-module.exports = function Layout({ title, children, userLogin }) {
+
+module.exports = function Layout({ title, children, userLogin,userStat }) {
   return (
     <html lang="en">
       <head>
@@ -20,7 +21,7 @@ module.exports = function Layout({ title, children, userLogin }) {
         <script defer src="/js/apartmentsScript.js"/>
       </head>
       <body>
-        <Navbar userLogin={userLogin} />
+        <Navbar userLogin={userLogin} userStat={userStat}/>
         {children}
         <Footer />
       </body>
