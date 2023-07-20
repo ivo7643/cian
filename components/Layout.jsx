@@ -2,7 +2,7 @@ const React = require("react");
 const Navbar = require("./Navbar");
 const Footer = require("./Footer");
 
-module.exports = function Layout({ title, children, userName }) {
+module.exports = function Layout({ title, children, userLogin }) {
   return (
     <html lang="en">
       <head>
@@ -19,7 +19,7 @@ module.exports = function Layout({ title, children, userName }) {
         <script defer src="/js/authScripts.js"/>
       </head>
       <body>
-        <Navbar userName={userName} />
+        <Navbar userLogin={userLogin} />
         {children}
         <Footer />
       </body>
