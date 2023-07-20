@@ -1,10 +1,10 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-module.exports = function RegForm({ title, userLogin }) {
+module.exports = function LogForm({ title }) {
   return (
-    <Layout title={title} userLogin={userLogin}>
-      <form className="col s12 regForm" action="/api/auth/reg" method="POST">
+    <Layout title={title}>
+      <form className="col s12 logForm" action="/api/auth/log" method="POST">
         <div className="row">
           <div className="input-field col s6">
             <input
@@ -17,28 +17,10 @@ module.exports = function RegForm({ title, userLogin }) {
           </div>
           <div className="input-field col s6">
             <input
-              name="email"
-              id="email"
-              className="validate"
-              placeholder="email"
-              required
-            />
-          </div>
-          <div className="input-field col s6">
-            <input
               name="password"
               id="password"
               className="validate"
               placeholder="password"
-              required
-            />
-          </div>
-          <div className="input-field col s6">
-            <input
-              name="passwordCheck"
-              id="passwordCheck"
-              className="validate"
-              placeholder="passwordCheck"
               required
             />
           </div>
@@ -51,7 +33,7 @@ module.exports = function RegForm({ title, userLogin }) {
             <i className="material-icons right">send</i>
           </button>
         </div>
-        <h2 className="regError"></h2>
+        <h2 className="logError"></h2>
       </form>
     </Layout>
   );

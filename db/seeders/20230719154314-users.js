@@ -1,10 +1,12 @@
 /** @type {import('sequelize-cli').Migration} */
+const bcrypt = require("bcrypt");
+
 module.exports = {
   async up(queryInterface) {
     await queryInterface.bulkInsert("Users", [
       {
         login: "admin",
-        password: "admin",
+        password: await bcrypt.hash("admin", 10),
         email: "123@mail.ru",
         isAdmin: true,
         createdAt: new Date(),
