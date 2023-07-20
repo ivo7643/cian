@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "postgres",
-    "database": "cian_db",
+    "database": "database_cian",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
