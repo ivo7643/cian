@@ -22,7 +22,7 @@ if (addForm) {
         }),
       });
       const data = await res.json();
-      console.log(data, '==================');
+ 
       adminAparmentList.insertAdjacentHTML('beforeend', data);
     } catch (error) {
       console.log(error.message);
