@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const Main = require("../../components/Main");
-
 const { Category, Apartment, Photo } = require("../../db/models");
 
 router.get("/", async (req, res) => {

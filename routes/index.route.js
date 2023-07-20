@@ -13,4 +13,5 @@ router.use("/api/apartments", ApartmentsRouter);
 router.use("/apartments", ApartmentCard);
 router.use("/", mainRouter);
 
+
 module.exports = router;

@@ -3,9 +3,9 @@ const React = require('react');
 const AdminApartment = require('./AdminApartment');
 const AddForm = require("./AddForm");
 
-module.exports = function AdminApartmetList({ title, apartments, user }) {
+module.exports = function AdminApartmetList({ title, apartments, userLogin,userStat }) {
   return (
-    <Layout title={title} user={user}>
+    <Layout title={title} userLogin={userLogin} userStat={userStat}>
       <AddForm />
       <div className="row adminAparmentList">
         {apartments.map((apartment) => (

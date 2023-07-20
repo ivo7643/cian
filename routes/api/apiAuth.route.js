@@ -6,11 +6,15 @@ router.post("/reg", async (req, res) => {
   try {
     const { login, password, email } = req.body;
     if (login && password && email) {
-        console.log(login)
-      let user = await User.findOne({ where: email });
+      let user = await User.findOne({ where: { login } });
       if (!user) {
         const hashPass = await bcrypt.hash(password, 10);
-        user = await User.create({ login, password: hashPass, email });
+        user = await User.create({
+          login,
+          password: hashPass,
+          email,
+          isAdmin: false,
+        });
         req.session.userId = user.id;
         res.locals.user = user.name;
         res.json({ message: "ok" });
@@ -25,4 +29,21 @@ router.post("/reg", async (req, res) => {
   }
 });
 
+router.post("/log", async (req, res) => {
+  try {
+    const { login, password } = req.body;
+    if (login && password) {
+      let user = await User.findOne({ where: { login } });
+      const pass = await bcrypt.compare(req.body.password, user.password);
+      if (user.login === login && pass) {
+        req.session.userId = user.id;
+        res.json({ message: "ok", isAdmin: user.isAdmin });
+      } else {
+        res.json({ message: "введены неверные данные" });
+      }
+    }
+  } catch (error) {
+    res.json({ messageError: error.message });
+  }
+});
 module.exports = router;
