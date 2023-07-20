@@ -16,6 +16,7 @@ module.exports = function Layout({ title, children, userName }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
+        <script defer src="/js/authScripts.js"/>
       </head>
       <body>
         <Navbar userName={userName} />
