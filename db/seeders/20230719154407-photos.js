@@ -14,6 +14,12 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        apartmentId: 3,
+        url: "https://gdb.rferl.org/2229D62A-BCD0-4FFE-BB1F-54598D5F0E01_w1080_r0_s.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 
