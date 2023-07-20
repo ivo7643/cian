@@ -29,7 +29,7 @@ module.exports = function Navbar({ userName }) {
                 <a href="#">LogIn</a>
               </li>
               <li>
-                <a href="#">Registration</a>
+                <a href="/auth/reg">Registration</a>
               </li>
             </>
           )}
