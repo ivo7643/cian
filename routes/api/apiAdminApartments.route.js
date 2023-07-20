@@ -12,6 +12,7 @@ router.post('/', async (req, res) => {
       description,
       map,
     });
+    console.log(newApartment);
     res.renderComponent(
       ApparmentOne,
       { apartment: newApartment },
