@@ -5,13 +5,18 @@ module.exports = function AddForm({title}){
     return(
    <div className="form row">
         <div className="s12 pink lighten-4" >
-    <form className="col s12 addForm" action="/api/apartment/addApartment" method="POST">
+    <form className="col s12 addForm" name='addForm' action="/api/apartments" method="POST">
       <div className="row">
         <div className="input-field col s6">
           <input name="name" id='name' className="validate" placeholder="name" required/>
         </div>
         <div className="input-field col s6">
-          <input name="category" id='category' className="validate" placeholder="category" required/>
+          {/* <input name="categoryId" id='categoryId' className="validate" placeholder="categoryId" required/> */}
+          <select name="select">
+            <option value="value1">Значение 1</option>
+            <option value="value2" selected>Значение 2</option>
+            <option value="value3">Значение 3</option>
+          </select>
         </div>
         <div className="input-field col s6">
           <input name="price"id='price' className="validate" placeholder="price" required/>
