@@ -5,6 +5,7 @@ async function auth(req, res, next) {
     const user = await User.findOne({ where: { id: req.session.userId } });
     res.locals.userLogin = user.login;
     res.locals.userId = user.id;
+    res.locals.userStat=user.isAdmin
   }
   next();
 }

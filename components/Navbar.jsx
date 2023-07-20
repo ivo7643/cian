@@ -1,6 +1,6 @@
 const React = require("react");
 
-module.exports = function Navbar({ userLogin }) {
+module.exports = function Navbar({ userLogin, userStat }) {
   return (
     <nav>
       <div className="nav-wrapper blue darken-1">
@@ -9,21 +9,38 @@ module.exports = function Navbar({ userLogin }) {
         </a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           {userLogin ? (
-            <>
-              <li>
-                <a href="#">Categories</a>
-              </li>
-              <li className="logout">
-                <a href="#">LogOut</a>
-              </li>
-              <li className="userLogin">
-                <div>{userLogin}</div>
-              </li>
-            </>
+            userStat ? (
+              <>
+                <li>
+                  <a href="/adminApartments">AdminPage</a>
+                </li>
+                <li>
+                  <a href="/">Categories</a>
+                </li>
+                <li className="logout">
+                  <a href="#">LogOut</a>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <a href="/">Categories</a>
+                </li>
+                <li>
+                  <a href="/favorites">Favorites</a>
+                </li>
+                <li className="logout">
+                  <a href="#">LogOut</a>
+                </li>
+                <li className="userLogin">
+                  <div>{userLogin}</div>
+                </li>
+              </>
+            )
           ) : (
             <>
               <li>
-                <a href="#">Categories</a>
+                <a href="/">Categories</a>
               </li>
               <li>
                 <a href="/auth/log">LogIn</a>
