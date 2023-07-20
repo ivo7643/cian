@@ -1,3 +1,5 @@
+const { sequelize } = require("../models");
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -12,9 +14,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT,
       },
-      category: {
+      categoryId: {
         allowNull: false,
-        type: Sequelize.TEXT,
+        type: Sequelize.INTEGER,
+        references: { model: "Categories", key: "id" },
       },
       price: {
         allowNull: false,
