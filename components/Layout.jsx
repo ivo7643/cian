@@ -17,6 +17,7 @@ module.exports = function Layout({ title, children, userLogin,userStat }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
+        <link rel="stylesheet" href='/css/style.css'/>
         <script defer src="/js/authScripts.js"/>
         <script defer src="/js/apartmentsScript.js"/>
       </head>

@@ -8,13 +8,13 @@ const ApartmentCard = require("./view/apartment.route");
 const Favorites=require('./view/favorites.route')
 
 
-
-router.use("/favorites",Favorites);
 router.use("/adminApartments", adminApartmentsRouter);
+router.use("/favorites",Favorites);
 router.use("/auth", authRouter);
 router.use("/api/auth", apiAuthRouter);
 router.use("/api/apartments", ApartmentsRouter);
 router.use("/apartments", ApartmentCard);
 router.use("/", mainRouter);
+
 
 module.exports = router;
