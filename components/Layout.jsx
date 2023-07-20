@@ -17,6 +17,7 @@ module.exports = function Layout({ title, children, userName }) {
           rel="stylesheet"
         />
         <script defer src="/js/authScripts.js"/>
+        <script defer src="/js/apartmentsScript.js"/>
       </head>
       <body>
         <Navbar userName={userName} />

@@ -1,5 +1,5 @@
-const ReactDOMServer = require("react-dom/server");
-const React = require("react");
+const ReactDOMServer = require('react-dom/server');
+const React = require('react');
 
 function renderComponent(
   reactComponent,
