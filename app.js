@@ -1,14 +1,13 @@
-require('@babel/register');
-const express = require('express');
-const serverConfig = require('./config/serverConfig');
-const app = express();
+require("@babel/register");
+const express = require("express");
+const serverConfig = require("./config/serverConfig");
+const indexRouter = require("./routes/index.route");
 
+const app = express();
 const PORT = 3010;
 serverConfig(app);
 
-// const indexRoute = require('./routes/index.route');
-
-// app.use('/', indexRoute);
+app.use("/", indexRouter);
 
 app.listen(PORT, async () => {
   console.log(`Server started on port ${PORT}`);
