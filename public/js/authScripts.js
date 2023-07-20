@@ -2,6 +2,7 @@ const regForm = document.querySelector(".regForm");
 const regError = document.querySelector(".regError");
 const logForm = document.querySelector(".logForm");
 const logError = document.querySelector(".logError");
+const logout = document.querySelector(".logout");
 
 if (regForm) {
   regForm.addEventListener("submit", async (e) => {
@@ -55,3 +56,13 @@ if (logForm) {
     }
   });
 }
+
+if (logout) {
+    logout.addEventListener("click", async () => {
+      const res = await fetch("/auth/logout");
+      const data = await res.json();
+      if (data.message === "Успешный выход") {
+        window.location.href = "/";
+      }
+    });
+  }
