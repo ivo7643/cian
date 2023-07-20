@@ -40,7 +40,7 @@ module.exports = function Navbar({ userLogin, userStat }) {
           ) : (
             <>
               <li>
-                <a href="#">Categories</a>
+                <a href="/">Categories</a>
               </li>
               <li>
                 <a href="/auth/log">LogIn</a>
