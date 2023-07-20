@@ -1,16 +1,17 @@
 const router = require("express").Router();
 const ApartmentCard = require("../../components/ApartmentCard");
-const { Apartment, Photo, Category } = require("../../db/models");
+const { Apartment, Photo } = require("../../db/models");
 
 router.get("/:idApartment", async (req, res) => {
   const { idApartment } = req.params;
-  const categories = await Category.findAll();
   const apartment = await Apartment.findOne({
     where: { id: idApartment },
     include: { model: Photo },
   });
-  console.log(apartment);
-  res.renderComponent(ApartmentCard, { apartment });
+  res.renderComponent(ApartmentCard, {
+    title: `${apartment.name}`,
+    apartment,
+  });
 });
 
 module.exports = router;
