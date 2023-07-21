@@ -12,7 +12,7 @@ module.exports = function Main({ title, userLogin, apartments, categories,userSt
     <Layout title={title} userLogin={userLogin} userStat={userStat}>
       <Filter categories={categories} />
       <div className="main">
-        <ApartmentList apartments={apartments} userStat={userStat}/>
+        <ApartmentList apartments={apartments} userStat={userStat} userLogin={userLogin}/>
       </div>
     </Layout>
   );
