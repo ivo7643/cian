@@ -3,7 +3,7 @@ const React = require('react');
 
 module.exports = function UpdateForm({apartment,title}){
     return(
-        <Layout title={title}>
+  <Layout title={title}>
    <div className="form row">
         <div className="s12 pink lighten-4" >
     <form className="col s12 updForm" data-id={apartment.id}>
@@ -17,13 +17,13 @@ module.exports = function UpdateForm({apartment,title}){
           <option value="3">Комната</option>
         </select>
         <div className="input-field col s6">
-          <input name="price" id='price' className="validate" placeholder="price" defaultValue={apartment.name} required/>
+          <input name="price" id='price' className="validate" placeholder="price" defaultValue={apartment.price} required/>
         </div>
         <div className="input-field col s6">
-          <input name="description" id='description' className="validate" placeholder="description" defaultValue={prapartmentoduct.name} required/>
+          <input name="description" id='description' className="validate" placeholder="description" defaultValue={apartment.description} required/>
         </div>
         <div className="input-field col s6">
-          <input name="map"  id='map' className="validate" placeholder="map" defaultValue={apartment.name} required/>
+          <input name="map"  id='map' className="validate" placeholder="map" defaultValue={apartment.map} required/>
         </div>
         <button className="btn waves-effect waves-light purple lighten-3" type="submit" >add
          <i className="material-icons right">send</i>
