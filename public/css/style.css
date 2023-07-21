@@ -95,6 +95,12 @@ select {
 .btn_box {
   border: none;
 }
+
+.button_box {
+  display: flex;
+  margin: 10px;
+}
+
 .btn_inner {
   display: flex;
   justify-content: center;
