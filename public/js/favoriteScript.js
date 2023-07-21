@@ -1,6 +1,5 @@
 const ApList = document.querySelector(".AparmentList");
-const favBut = document.querySelector(".favBut");
-favBut;
+const Favorites = document.querySelector(".favorites");
 
 if (ApList) {
   ApList.addEventListener("click", async (e) => {
@@ -16,7 +15,21 @@ if (ApList) {
         }),
       });
       const data = await res.json();
-  
+    }
+  });
+}
+
+if (Favorites) {
+  Favorites.addEventListener("click", async (e) => {
+    if (e.target.classList.contains("delFavBut")) {
+      const oneCard = e.target.closest(".apartmentOne");
+      const res = await fetch(`/api/favorites/${e.target.dataset.id}/delete`,{
+        method:'DELETE'
+      })
+      const data=await res.json()
+      if (data.delFavorite) {
+        oneCard.remove();
+      }
     }
   });
 }

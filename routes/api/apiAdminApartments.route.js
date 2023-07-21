@@ -29,7 +29,9 @@ router.delete('/:idApartment/delete', async (req, res) => {
   try {
     const { idApartment } = req.params;
     const delApartment = await Apartment.destroy({ where: { id: idApartment } });
+
     res.json({ delApartment });
+ 
   } catch (error) {
     res.json({ message: error.message });
   }
