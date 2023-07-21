@@ -23,6 +23,7 @@ module.exports = function Layout({ title, children, userLogin, userStat }) {
         <link rel="stylesheet" href="/css/style.css" />
         <script defer src="/js/authScripts.js" />
         <script defer src="/js/apartmentsScript.js" />
+           <script defer src="/js/favoriteScript.js"/>
       </head>
       <Navbar userLogin={userLogin} userStat={userStat} />
       <body>

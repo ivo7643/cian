@@ -17,7 +17,7 @@ module.exports = function Apartment({ apartment, userStat, userLogin }) {
         <div className="card-action">
           <a href={`/apartments/${apartment.id}`}>Узнать подробнее</a>
 
-          {userLogin && !userStat && <button>Добавить в избранное</button>}
+          {userLogin && !userStat && <button className="favBut" data-id={apartment.id}>Добавить в избранное</button>}
         </div>
       </div>
     </div>
