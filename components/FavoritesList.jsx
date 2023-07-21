@@ -1,5 +1,4 @@
 const React = require("react");
-const Favorites=require('./Favorites')
-
+const Favorites = require("./Favorites");
 
 // module.exports =function FavoritesList()
