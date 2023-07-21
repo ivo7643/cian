@@ -1,0 +1,231 @@
+img {
+  width: 500px;
+  height: 600px;
+}
+
+body {
+  background-color: #f5f5f5;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+a {
+  font-size: 30px;
+}
+
+.brand-logo {
+  margin-left: 20px;
+}
+.logo_img {
+  width: 300px;
+  height: 150px;
+  margin: 25px;
+}
+
+.a_navbar {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+.nav-main {
+  position: sticky !important;
+  top: 0;
+  z-index: 10;
+
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+}
+select {
+  display: block !important;
+}
+.card-name {
+  position: absolute;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  border-radius: 0 30px 0 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding: 24px;
+}
+.apartment {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.card-title {
+  position: none !important;
+  color: #f5f5f5;
+}
+
+.form {
+  margin-top: 20px;
+  width: 1200px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Параметры тени */
+  padding: 10px;
+}
+
+.filter_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100vw;
+  height: 110px;
+}
+
+.btn_box {
+  border: none;
+}
+
+.button_box {
+  display: flex;
+  margin: 10px;
+}
+
+.btn_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 75px;
+  background-color: #ffbc5b;
+  border-radius: 30px;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  color: #0f0f0f;
+}
+.apartmentOne {
+  width: 600px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 2px black;
+}
+.footer_container {
+  margin-right: 25px;
+}
+.footer_p {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #0f0f0f;
+}
+
+.favorites{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+.apartmentOne_card {
+  display: flex;
+  flex-direction: column;
+}
+.apartment_card {
+  height: 1250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px;
+}
+.oneCard-title {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  color: #f5f5f5;
+}
+.photos_container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 2px;
+  /* width: 900px;
+  height: 300px; */
+}
+.galery_photo {
+  width: 400px;
+  height: 550px;
+}
+
+.card-content {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  color: #f5f5f5;
+}
+.oneCard-price {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  color: #ffbc5b;
+}
+.description_container {
+  margin: 75px 0 75px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+.logForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.regForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.input-field {
+  width: 450px;
+  height: 100px;
+}
+.contaner_404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.image_404 {
+  width: 700px;
+  height: 700px;
+}
+.four {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 700px;
+}
