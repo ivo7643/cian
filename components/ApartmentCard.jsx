@@ -12,6 +12,11 @@ module.exports = function ApartmentCard({
       <div className="col s4 apartmentOne " data-id={apartment.id}>
         <div className="card apartment grey darken-1">
           <div className="card-image">
+            {apartment.Photos.map((photo) => (
+              <div key={photo.id} className="card-image">
+                <img className="galery_photo" src={photo.url} />
+              </div>
+            ))}
             {apartment.Photos.length > 0 && (
               <img src={apartment.Photos[0].url} />
             )}
