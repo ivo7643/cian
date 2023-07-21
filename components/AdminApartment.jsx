@@ -19,10 +19,12 @@ module.exports = function Apartment({ apartment }) {
         <div className="card-content">
           <span className="card-title">Описание: {apartment.description}</span>
         </div>
-        <button className="deleteApartment">Удалить</button>
-        <a href={`/adminApartments/updForm/${apartment.id}`}>
-          <button className="updApartment">Изменить</button>
-        </a>
+        <div className="button_box">
+          <button className="deleteApartment btn_inner">Удалить</button>
+          <a href={`/adminApartments/updForm/${apartment.id}`}>
+            <button className="updApartment btn_inner">Изменить</button>
+          </a>
+        </div>
         <div className="card-action black">
           <a href={`/apartments/${apartment.id}`}>Узнать подробнее</a>
         </div>
