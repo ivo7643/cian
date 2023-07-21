@@ -1,16 +1,18 @@
-const express = require("express");
-const path = require("path");
-const morgan = require("morgan");
-const cookieParser = require("cookie-parser");
-const session = require("express-session");
-const ssr = require("../middleware/renderComponent");
+const express = require('express');
+const path = require('path');
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const ssr = require('../middleware/renderComponent');
 const auth = require('../middleware/auth');
-const sessionConfig = require("./sessionConfig");
+const sessionConfig = require('./sessionConfig');
+const fileUpload = require('express-fileupload');
 
 const serverConfig = (app) => {
-  app.use(morgan("dev"));
-  app.use(express.static(path.join(__dirname, "../public")));
+  app.use(morgan('dev'));
+  app.use(express.static(path.join(__dirname, '../public')));
   app.use(cookieParser());
+  app.use(fileUpload());
   app.use(session(sessionConfig));
   app.use(auth);
   app.use(ssr);

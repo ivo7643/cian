@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Apartment({ apartment, foto }) {
+module.exports = function Apartment({ apartment }) {
   return (
     <div className="col s4 apartmentOne " data-id={apartment.id}>
       <div className="card product grey lighten-4">
@@ -8,8 +8,8 @@ module.exports = function Apartment({ apartment, foto }) {
           <span className="card-title">{apartment.name}</span>
         </div>
         <div className="card-image">
-         <img  className='imgProduct' src={apartment.map}/>
-       </div>
+          {apartment.Photos.length > 0 && <img src={apartment.Photos[0].url} />}
+        </div>
         <div className="card-content">
           <span className="card-title">Категория: {apartment.categoryId}</span>
         </div>
