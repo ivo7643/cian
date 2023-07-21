@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Apartment, Photo } = require('../../db/models');
 const ApparmentOne = require('../../components/AdminApartment');
+const fileUp = require("../../utils/fileUpload");
 
 router.put('/:id', async (req, res) => {
   try {
@@ -36,20 +37,30 @@ router.delete('/:idApartment/delete', async (req, res) => {
 
 router.post('/addProduct', async (req, res) => {
   const { name, categoryId, price, description, map, } = req.body;
+  const {homesImg} = req.files;
   try {
-    const newApartment = await Apartment.create({
+    let newApartment = await Apartment.create({
       name,
       categoryId,
       price,
       description,
       map,
     });
-    console.log(newApartment);
+    const arrUrl = await Promise.all(
+      homesImg.map(async (el) => await fileUp(el)),
+    );
+    const newPhoto = await Promise.all(
+      arrUrl.map(async (el) => await Photo.create({
+      apartmentId: newApartment.id,
+      url: el,
+    })));
+    newApartment = await Apartment.findOne ({ where: {id: newApartment.id}, include: {model:Photo}})
     res.json({ html:res.renderComponent(ApparmentOne,
       { apartment: newApartment },
       { htmlOnly: true },
   )});
   } catch (error) {
+    console.log(error.message);
     res.status(500).json({ message: error.message });
   }
 });

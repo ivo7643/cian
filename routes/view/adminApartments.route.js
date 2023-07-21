@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const ApartmentList = require('../../components/AdminApartmentList');
 // const ApartmentPage = require('../../components/ApartmentPage');
-const { Apartment, Foto } = require('../../db/models');
+const { Apartment, Photo } = require('../../db/models');
 const UpdateForm = require('../../components/UpdateForm');
 
 router.get('/', async (req, res) => {
-  const apartments = await Apartment.findAll();
+  const apartments = await Apartment.findAll({ include: { model: Photo } });
   res.renderComponent(ApartmentList, { title: 'Аппартаменты', apartments });
 });
 
