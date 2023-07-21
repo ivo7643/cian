@@ -8,9 +8,8 @@ module.exports = function Apartment({ apartment, userStat, userLogin }) {
 "
       >
         <div className="card-image">
-          
           {apartment.Photos.length > 0 && <img src={apartment.Photos[0].url} />}
-          <span className="card-title">{apartment.name}</span>
+          <span className="card-name">{apartment.name}</span>
         </div>
         <div className="card-content">
           <span className="card-title">Стоимость: {apartment.price}</span>
@@ -18,7 +17,11 @@ module.exports = function Apartment({ apartment, userStat, userLogin }) {
         <div className="card-action">
           <a href={`/apartments/${apartment.id}`}>Узнать подробнее</a>
 
-          {userLogin && !userStat && <button className="favBut" data-id={apartment.id}>Добавить в избранное</button>}
+          {userLogin && !userStat && (
+            <button className="favBut" data-id={apartment.id}>
+              Добавить в избранное
+            </button>
+          )}
         </div>
       </div>
     </div>

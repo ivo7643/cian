@@ -9,26 +9,26 @@ module.exports = function ApartmentCard({
 }) {
   return (
     <Layout title={title} userStat={userStat} userLogin={userLogin}>
-      <div className="col s4 apartmentOne " data-id={apartment.id}>
-        <div className="card apartment grey darken-1">
-          <div className="card-image">
+      <div className="apartmentOne_card" data-id={apartment.id}>
+        <div className="apartment_card grey darken-1">
+          <div className="photos_container">
             {apartment.Photos.map((photo) => (
               <div key={photo.id} className="card-image">
                 <img className="galery_photo" src={photo.url} />
               </div>
             ))}
-            {apartment.Photos.length > 0 && (
-              <img src={apartment.Photos[0].url} />
-            )}
-            <span className="card-title">{apartment.name}</span>
           </div>
-          <div className="card-content">
-            <span className="card-title">Стоимость: {apartment.price}</span>
-          </div>
-          <div className="card-content">
-            <span className="card-title">
-              Описание: {apartment.description}
-            </span>
+          <div className="description_container">
+            <span className="oneCard-title">{apartment.name}</span>
+            <div className="card-content">
+              Стоимость:
+              <span className="oneCard-price">{apartment.price}</span>
+            </div>
+            <div className="card-content">
+              <span className="oneCard-title">
+                Описание: {apartment.description}
+              </span>
+            </div>
           </div>
         </div>
       </div>
