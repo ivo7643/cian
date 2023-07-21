@@ -5,10 +5,9 @@ const updForm = document.querySelector('.updForm');
 if (addForm) {
   addForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const { name, categoryId, price, description, map } = e.target;
-    console.log(e.target, '1111111111111');
+    const { name, categoryId, price, description, map, } = e.target;
     try {
-      const res = await fetch('/api/apartments', {
+      const res = await fetch('/api/apartments/addProduct', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,8 +21,8 @@ if (addForm) {
         }),
       });
       const data = await res.json();
- 
-      adminAparmentList.insertAdjacentHTML('beforeend', data);
+
+      adminAparmentList.insertAdjacentHTML('beforeend', data.html);
     } catch (error) {
       console.log(error.message);
     }
@@ -37,8 +36,7 @@ if (updForm) {
       name, categoryId, price, description, map
     } = e.target;
     const { id } = e.target.dataset;
-    // const  id  = e.target.dataset.id;
-    const res = await fetch(`/api/apartmets/${id}`, {
+    const res = await fetch(`/api/apartments/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -52,8 +50,26 @@ if (updForm) {
       }),
     });
     const data = await res.json();
-    if (data.productUpd[0] > 0) {
-      window.location.href = '/apartmets';
+    console.log(data);
+    if (data.apartmentUpd[0] > 0) {
+      window.location.href = '/adminApartments';
+    } else {
+      
+    }
+  });
+}
+
+if (adminAparmentList) {
+  adminAparmentList.addEventListener('click', async (e) => {
+    if (e.target.classList.contains('deleteApartment')) {
+      const apartmentOne = e.target.closest('.apartmentOne');
+      const res = await fetch(`/api/apartments/${apartmentOne.dataset.id}/delete`, {
+        method: 'DELETE',
+      });
+      const data = await res.json();
+      if (data.delApartment) {
+        apartmentOne.remove();
+      }
     }
   });
 }

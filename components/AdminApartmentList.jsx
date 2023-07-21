@@ -3,7 +3,7 @@ const React = require('react');
 const AdminApartment = require('./AdminApartment');
 const AddForm = require("./AddForm");
 
-module.exports = function AdminApartmetList({ title, apartments, userLogin,userStat }) {
+module.exports = function AdminApartmetList({ title, apartments, userLogin, userStat, }) {
   return (
     <Layout title={title} userLogin={userLogin} userStat={userStat}>
       <AddForm />

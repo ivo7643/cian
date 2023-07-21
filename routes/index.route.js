@@ -9,11 +9,11 @@ const Favorites=require('./view/favorites.route')
 
 
 router.use("/adminApartments", adminApartmentsRouter);
+router.use("/api/apartments", ApartmentsRouter);
+router.use("/apartments", ApartmentCard);
 router.use("/favorites",Favorites);
 router.use("/auth", authRouter);
 router.use("/api/auth", apiAuthRouter);
-router.use("/api/apartments", ApartmentsRouter);
-router.use("/apartments", ApartmentCard);
 router.use("/", mainRouter);
 
 
