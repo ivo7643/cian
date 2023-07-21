@@ -11,9 +11,10 @@ return (
     <Layout title={title} userLogin={userLogin} userStat={userStat}>
       <div className="favorites">
    {favorites.map((favorite)=>{
-    return <Apartment apartment={favorite.Apartment} userStat={userStat} userLogin={userLogin}/>
+    return <Apartment apartment={favorite.Apartment} key={favorite.id} userStat={userStat} userLogin={userLogin} favorite={favorite}/>
    })}
       </div>
+      
     </Layout>
   );
 };
