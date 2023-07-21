@@ -7,10 +7,6 @@ module.exports = function Apartment({ apartment }) {
         {/* <div className="card-name">
         </div> */}
         <div className="card-image">
-          <img className="imgProduct" src={apartment.map} />
-          <span className="card-title">{apartment.name}</span>
-        </div>
-        <div className="card-image">
           {apartment.Photos.length > 0 && <img src={apartment.Photos[0].url} />}
         </div>
 
