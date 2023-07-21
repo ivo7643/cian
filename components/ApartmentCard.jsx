@@ -14,7 +14,7 @@ module.exports = function ApartmentCard({
           <div className="card-image">
             {apartment.Photos.map((photo) => (
               <div key={photo.id} className="card-image">
-                <img className="galery_photo" src={apartment.Photos[0].url} />
+                <img className="galery_photo" src={photo.url} />
               </div>
             ))}
             {apartment.Photos.length > 0 && (
