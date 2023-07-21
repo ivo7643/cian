@@ -151,6 +151,7 @@ footer {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
+  padding: 5px;
 }
 .oneCard-title {
   font-family: "IBM Plex Mono";
@@ -164,13 +165,14 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  padding: 2px;
   /* width: 900px;
   height: 300px; */
 }
 .galery_photo {
-  width: 500px;
-  height: 650px;
+  width: 400px;
+  height: 550px;
 }
 
 .card-content {
