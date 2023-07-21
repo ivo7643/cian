@@ -45,7 +45,9 @@ module.exports = function Navbar({ userLogin, userStat }) {
                   </a>
                 </li>
                 <li className="userLogin">
-                  <div>{userLogin}</div>
+                  <a href="#" className="a_navbar">
+                    {userLogin}
+                  </a>
                 </li>
               </>
             )

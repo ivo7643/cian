@@ -5,7 +5,7 @@ module.exports = function Filter({ categories }) {
     <div className="filter_container">
       {categories.map((category) => (
         <div key={category.id} className="btn_box">
-          <a href={`/${category.id}`}>
+          <a href={`/apart/${category.id}`}>
             <button className="btn_inner">{category.name}</button>
           </a>
         </div>

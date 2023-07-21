@@ -4,9 +4,9 @@ const Layout = require("./Layout");
 module.exports = function LogForm({ title }) {
   return (
     <Layout title={title}>
-      <form className="col s12 logForm" action="/api/auth/log" method="POST">
+      <form className=" logForm" action="/api/auth/log" method="POST">
         <div className="row">
-          <div className="input-field col s6">
+          <div className="input-field">
             <input
               name="login"
               id="login"
@@ -15,7 +15,7 @@ module.exports = function LogForm({ title }) {
               required
             />
           </div>
-          <div className="input-field col s6">
+          <div className="input-field">
             <input
               name="password"
               id="password"
@@ -26,7 +26,7 @@ module.exports = function LogForm({ title }) {
           </div>
 
           <button
-            className="btn waves-effect waves-light purple lighten-3"
+            className="btn waves-effect waves-light amber darken-1"
             type="submit"
           >
             add

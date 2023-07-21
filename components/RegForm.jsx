@@ -1,12 +1,12 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-module.exports = function RegForm({ title, userLogin,userStat }) {
+module.exports = function RegForm({ title, userLogin, userStat }) {
   return (
     <Layout title={title} userLogin={userLogin} userStat={userStat}>
-      <form className="col s12 regForm" action="/api/auth/reg" method="POST">
+      <form className="regForm" action="/api/auth/reg" method="POST">
         <div className="row">
-          <div className="input-field col s6">
+          <div className="input-field">
             <input
               name="login"
               id="login"
@@ -15,7 +15,7 @@ module.exports = function RegForm({ title, userLogin,userStat }) {
               required
             />
           </div>
-          <div className="input-field col s6">
+          <div className="input-field">
             <input
               name="email"
               id="email"
@@ -24,7 +24,7 @@ module.exports = function RegForm({ title, userLogin,userStat }) {
               required
             />
           </div>
-          <div className="input-field col s6">
+          <div className="input-field">
             <input
               name="password"
               id="password"
@@ -33,7 +33,7 @@ module.exports = function RegForm({ title, userLogin,userStat }) {
               required
             />
           </div>
-          <div className="input-field col s6">
+          <div className="input-field">
             <input
               name="passwordCheck"
               id="passwordCheck"
@@ -44,7 +44,7 @@ module.exports = function RegForm({ title, userLogin,userStat }) {
           </div>
 
           <button
-            className="btn waves-effect waves-light purple lighten-3"
+            className="btn waves-effect waves-light amber darken-1"
             type="submit"
           >
             add

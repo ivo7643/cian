@@ -188,3 +188,36 @@ footer {
   gap: 30px;
   text-align: center;
 }
+.logForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.regForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.input-field {
+  width: 450px;
+  height: 100px;
+}
+.contaner_404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.image_404 {
+  width: 700px;
+  height: 700px;
+}
+.four {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 700px;
+}
