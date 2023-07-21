@@ -18,6 +18,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: { model: "Categories", key: "id" },
+        onDelete: 'CASCADE'
       },
       price: {
         allowNull: false,

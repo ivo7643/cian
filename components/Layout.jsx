@@ -2,8 +2,7 @@ const React = require("react");
 const Navbar = require("./Navbar");
 const Footer = require("./Footer");
 
-
-module.exports = function Layout({ title, children, userLogin,userStat }) {
+module.exports = function Layout({ title, children, userLogin, userStat }) {
   return (
     <html lang="en">
       <head>
@@ -17,15 +16,20 @@ module.exports = function Layout({ title, children, userLogin,userStat }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href='/css/style.css'/>
-        <script defer src="/js/authScripts.js"/>
-        <script defer src="/js/apartmentsScript.js"/>
+        <link
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/css/style.css" />
+        <script defer src="/js/authScripts.js" />
+        <script defer src="/js/apartmentsScript.js" />
+           <script defer src="/js/favoriteScript.js"/>
       </head>
+      <Navbar userLogin={userLogin} userStat={userStat} />
       <body>
-        <Navbar userLogin={userLogin} userStat={userStat}/>
-        {children}
-        <Footer />
+        <div className="layout_container">{children}</div>
       </body>
+      <Footer />
     </html>
   );
 };
