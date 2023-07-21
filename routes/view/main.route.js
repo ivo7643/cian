@@ -8,10 +8,10 @@ router.get("/", async (req, res) => {
   res.renderComponent(Main, {
     title: "Главная",
     apartments,
-    categories
+    categories,
   });
 });
-router.get("/:id", async (req, res) => {
+router.get("/apart/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const apartments = await Apartment.findAll({
