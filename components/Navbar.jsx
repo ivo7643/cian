@@ -2,35 +2,47 @@ const React = require("react");
 
 module.exports = function Navbar({ userLogin, userStat }) {
   return (
-    <nav>
-      <div className="nav-wrapper blue darken-1">
+    <nav className="nav-main">
+      <div className="nav-wrapper deep-purple darken-1">
         <a href="/" className="brand-logo">
-          JIVOY DOM
+          Живой Дом
         </a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           {userLogin ? (
             userStat ? (
               <>
                 <li>
-                  <a href="/adminApartments">AdminPage</a>
+                  <a href="/adminApartments" className="a_navbar">
+                    AdminPage
+                  </a>
                 </li>
                 <li>
-                  <a href="/">Categories</a>
+                  <a href="/" className="a_navbar">
+                    Categories
+                  </a>
                 </li>
                 <li className="logout">
-                  <a href="#">LogOut</a>
+                  <a href="#" className="a_navbar">
+                    LogOut
+                  </a>
                 </li>
               </>
             ) : (
               <>
                 <li>
-                  <a href="/">Categories</a>
+                  <a href="/" className="a_navbar">
+                    Categories
+                  </a>
                 </li>
                 <li>
-                  <a href="/favorites">Favorites</a>
+                  <a href="/favorites" className="a_navbar">
+                    Favorites
+                  </a>
                 </li>
                 <li className="logout">
-                  <a href="#">LogOut</a>
+                  <a href="#" className="a_navbar">
+                    LogOut
+                  </a>
                 </li>
                 <li className="userLogin">
                   <div>{userLogin}</div>
@@ -40,13 +52,19 @@ module.exports = function Navbar({ userLogin, userStat }) {
           ) : (
             <>
               <li>
-                <a href="/">Categories</a>
+                <a href="/" className="a_navbar">
+                  Categories
+                </a>
               </li>
               <li>
-                <a href="/auth/log">LogIn</a>
+                <a href="/auth/log" className="a_navbar">
+                  LogIn
+                </a>
               </li>
               <li>
-                <a href="/auth/reg">Registration</a>
+                <a href="/auth/reg" className="a_navbar">
+                  Registration
+                </a>
               </li>
             </>
           )}

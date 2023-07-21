@@ -1,11 +1,16 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-module.exports = function ApartmentCard({ title, apartment, userStat,userLogin}) {
+module.exports = function ApartmentCard({
+  title,
+  apartment,
+  userStat,
+  userLogin,
+}) {
   return (
     <Layout title={title} userStat={userStat} userLogin={userLogin}>
       <div className="col s4 apartmentOne " data-id={apartment.id}>
-        <div className="card apartment deep-purple darken-3">
+        <div className="card apartment grey darken-1">
           <div className="card-image">
             {apartment.Photos.length > 0 && (
               <img src={apartment.Photos[0].url} />
