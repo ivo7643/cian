@@ -18,11 +18,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.INTEGER,
         references: { model: "Users", key: "id" },
+        onDelete: 'CASCADE'
       },
       apartmentId: {
         allowNull: false,
         type: DataTypes.INTEGER,
         references: { model: "Apartments", key: "id" },
+        onDelete: 'CASCADE'
       },
     },
     {
