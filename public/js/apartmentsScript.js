@@ -21,6 +21,7 @@ if (addForm) {
         }),
       });
       const data = await res.json();
+
       adminAparmentList.insertAdjacentHTML('beforeend', data.html);
     } catch (error) {
       console.log(error.message);

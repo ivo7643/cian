@@ -5,7 +5,11 @@ const { Category, Apartment, Photo } = require("../../db/models");
 router.get("/", async (req, res) => {
   const categories = await Category.findAll();
   const apartments = await Apartment.findAll({ include: { model: Photo } });
-  res.renderComponent(Main, { title: "Главная", apartments, categories });
+  res.renderComponent(Main, {
+    title: "Главная",
+    apartments,
+    categories
+  });
 });
 router.get("/:id", async (req, res) => {
   try {

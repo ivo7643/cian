@@ -1,6 +1,6 @@
 const React = require("react");
 
-module.exports = function Apartment({ apartment }) {
+module.exports = function Apartment({ apartment, userStat, userLogin }) {
   return (
     <div className="col s4 apartmentOne " data-id={apartment.id}>
       <div className="card apartment deep-purple darken-3">
@@ -11,11 +11,10 @@ module.exports = function Apartment({ apartment }) {
         <div className="card-content">
           <span className="card-title">Стоимость: {apartment.price}</span>
         </div>
-        <div className="card-content">
-          <span className="card-title">Описание: {apartment.description}</span>
-        </div>
         <div className="card-action">
           <a href={`/apartments/${apartment.id}`}>Узнать подробнее</a>
+
+          {userLogin && !userStat && <button>Добавить в избранное</button>}
         </div>
       </div>
     </div>

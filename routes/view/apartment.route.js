@@ -10,7 +10,7 @@ router.get("/:idApartment", async (req, res) => {
   });
   res.renderComponent(ApartmentCard, {
     title: `${apartment.name}`,
-    apartment,
+    apartment
   });
 });
 
